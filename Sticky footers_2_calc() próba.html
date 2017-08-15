@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="description" content="Sticky footer calc()">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Stycki Footer problem_solution_calc()</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+   <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" href="text/css">
+</head>
+<body>
+   <main class="content">  <!--The site/content full body-->
+     <div id="profile-card">
+    <div class="top-center-box">
+      <div class="profil-image">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Arcangelo_Corelli_2.jpg/200px-Arcangelo_Corelli_2.jpg" title="Arcangelo Corelli (Jan Frans van Douven portréja)">
+      </div>
+    <div class="name-headline">
+      <h1>Arcangelo Corelli</h1>
+      <h2>Barokk zeneszerző, hegedűművész, zeneszerző</h2>
+      <p>from</p>
+      <p>Italy. Fusignano, 1653. február 17. – Róma, 1713. január 8.</p> 
+      <a href="https://www.google.hu/maps/place/48010+Fusignano+Ravenna+megye,+Olaszorsz%C3%A1g/@44.4696932,11.9363223,14z/data=!3m1!4b1!4m5!3m4!1s0x477e04eb7428c613:0x69b37f7ae53d5ac5!8m2!3d44.46693!4d11.9639565" target="_blank" title="google map"><i class="material-icons" style="font-size:36px;color:whit">map</i></a>
+    </div>
+    <div class="content">
+    <p>Hegedümüvész, zeneszerzöi munkásságának a középpontjában is a hegedü állt, ezen a téren munkássága korszakos jelentöségü, ö a concerto grosso müfajának a megteremtöje.</p>
+    </div>
+    <div class="links">
+      <p>Contact me via:</p>
+      <a href="https://hu.wikipedia.org/wiki/Arcangelo_Corelli" target="_blank" title="Wikipedia"><i class="fa fa-wikipedia-w" style="font-size:24px"></i></a>
+      <a href="https://www.youtube.com/watch?v=rR8sfINxVe4" target="_blank" title="Youtube"><i class="fa fa-youtube-play" style="font-size:30px"></i></a>
+  </div>
+  </div>
+  </div>                 <!--Content end-->
+  <footer class="footer">
+    <span>footer</span>
+  </footer>
+  </main>
+</body>
+</html>
+
+<!-- CSS -->
+
+<style>
+	
+* {
+	box-sizing: border-box;
+}
+
+.content {
+  min-height: 100vh;  /*content - footer*/
+  background: #00FFFF;
+  position: relative;
+  padding-bottom: 50px;
+}
+
+.footer {
+  position: absolute;
+  height: 50px;  /*the footer working correctly with fix height*/
+  background: #000000;
+  color: #FFFFFF;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 50px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/*== Helper Colors==*/
+
+#profile-card {
+  background-color: rgba(0, 255, 0, .2); /*green*/
+  width: 31.875rem;                          
+  max-width: calc(100vw - 10px);
+
+  border-radius: 70px;
+  border: 1px solid #FAEBD7;
+  box-shadow: rgba(121, 121, 121, 1) 10px 10px 80px;
+}
+
+.top-center-box {
+ background-color: rgba(0, 255, 0, 0); /*green*/
+}
+
+.profil-image {
+  background-color:rgba(75, 0, 166, 0); /*purple*/
+}
+
+.name-headline {
+  background-color:rgba(75, 0, 166, 0); /*purple*/
+  border-top: 1px solid #FAEBD7;        /*horizontal line*/
+  
+}
+
+.content {
+  background-color:rgba(0, 255, 0, 0); /*green*/
+  border-top: 1px solid #FAEBD7;       /*horizontal line*/
+}
+
+.links {
+  background-color:rgba(75, 0, 166, 0); /*purple*/
+}
+/*===========================END================================*/
+
+/*==Text design==*/
+
+h1 {
+  font-size: 1.5625rem;
+  color: #DAA520;
+  text-align: center;
+  font-family:'Kaushan Script', cursive; 
+}
+
+h2 {
+  font-size: 1.1875rem;
+  text-align: center;
+  color: #FAEBD7;
+  font-family: 'Philosopher', sans-serif;
+}
+
+p {
+  color: #FAEBD7;
+  font-family:'Playball', cursive;
+  font-size: 1.25rem;
+  letter-spacing: .003em;
+  line-height: 1.68;
+  text-transform: capitalize;
+}
+
+/*========================END================================*/
+
+/*==Content==*/
+
+.top-center-box, .links {
+  text-align: center;
+}
+.top-center-box, .content {
+  width: 90%;
+  margin: 0 auto;
+}
+
+img {
+  width: 7.5rem;
+  height: 7.5rem;
+  border-radius: 50%;              /*profilkép lekerekítése*/
+  margin-top: -3.75rem;
+  padding: 1px;                    /*körvonal*/
+  background-color: #666;          /*körvonal színe*/
+  filter: grayscale(50%);          /*profilkép elszürkítve*/
+}
+
+img:hover {                          /*a profilfotó felnagyítódik, ha az egérrel rámutatunk*/
+  transform: scale(1.2);             /*nagyítás mértéke*/
+  transition: all 0.5s ease-in-out;  /*nagyítás sebessége*/
+   filter: grayscale(20%);           /*szürke filter*/
+}
+
+.top-center-box, h2 {
+  margin-bottom: 0%;
+  padding: 5% 5%;
+}
+
+.content {
+  margin-bottom: 5%;
+  padding: 1% 3%;
+}
+
+.name-headline {
+  margin-bottom: 10%;
+  padding: 5% 10%;
+}
+
+.links {
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 1%;
+}
+
+/*=================END===============*/
+
+/*==Link Style==*/
+
+a {
+  color: #B8860B;
+}
+
+a:hover {
+ color: rgba(255, 250, 153, 1);
+ transition: color .3s ease-in-out;
+}
+
+.fa-youtube-play:hover {
+  color: red;
+  transition: color .3s ease-in-out;
+}
+
+/*===================END==========================*/
+
+/*==Background picture==*/
+
+body {
+  background: url('https://static.panoramio.com.storage.googleapis.com/photos/large/54574829.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+
+</style>

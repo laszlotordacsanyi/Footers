@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="description" content="Sticky Footer with Bootstrap">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Bootstrap footer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+   <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" href="text/css">
+</head>
+<body>
+  <main class="content">
+    <span>content</span>
+  </main>
+  <footer class="footer">
+    <span>footer</span>
+  </footer>
+</body>
+</html>
+
+<!-- CSS -->
+
+<style>
+	
+* {
+	box-sizing: border-box;
+}
+
+html {                          /* Positioned container / No <div> Wrapper */
+  min-height: 100%;
+  position: relative;
+}
+
+body {
+  margin-bottom: 50px;
+}
+
+.footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  height: 50px;
+}
+
+/*==== HELPER STYLES ====*/
+
+body {
+  background: #cfcfcf;  /* grey */
+}
+
+.content,
+.footer {
+  padding: 10px;
+  color: rgba(255,255,255, .9);
+  font-family: monospace;
+  font-size: 1.125rem;
+}
+
+.content {
+  background: #ae001d;   /* red */
+  height: 200px;
+}
+
+.footer {
+  background: #193a6a;  /* blue */
+}
+</style>

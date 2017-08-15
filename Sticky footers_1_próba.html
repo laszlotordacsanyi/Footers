@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="description" content="Sticky footer">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Sticky footer 1</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+   <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" href="text/css">
+</head>
+<body>
+  <div class="wrapper">     <!-- The site full body-->
+    <main class="content">  <!--The content of the page / header /navbar etc..-->
+      <span>content</span>
+    </main>                 <!--End of content-->
+    <footer class="footer">
+      <span>footer</span>
+    </footer>
+  </div>
+</body>
+</html>
+
+<!-- CSS -->
+
+<style>
+	
+* {
+	box-sizing: border-box;
+}
+
+body {
+  background: #cfcfcf;
+}
+
+.wrapper {
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 50px; /* Equals height of the footer and pushes away the content in the case they would touch. */
+}
+
+.content {
+  background: #ae001d;
+  height: 200px;
+  background: url(https://orange.codeberryschool.com/content/images/project-assets/wedding-landing-cover.jpg);
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  color: hsl(340, 100%, 97%);
+  text-align: center;
+  display: table;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 50px;
+  background: #000000;
+  color: #FFFFFF;
+}
+
+</style>

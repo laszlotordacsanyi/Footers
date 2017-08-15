@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="description" content="Sticky footer calc()">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Stycki Footer problem_solution_calc()</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+   <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" href="text/css">
+</head>
+<body>
+   <main class="content">  <!--The site/content full body-->
+     <span>content</span>
+   </main>                  <!--Content end-->
+  <footer class="footer">
+    <span>footer</span>
+  </footer>
+</body>
+</html>
+
+<!-- CSS -->
+
+<style>
+	
+* {
+	box-sizing: border-box;
+}
+
+.content {
+  min-height: calc(100vh - 50px);  /*content - footer*/
+  background: #00FFFF;
+}
+
+.footer {
+  height: 50px;  /*the footer working correctly with fix height*/
+  background: #000000;
+  color: #FFFFFF;
+}
+
+</style>
